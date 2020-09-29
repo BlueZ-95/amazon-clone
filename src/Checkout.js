@@ -10,7 +10,7 @@ function Checkout() {
 
   return (
     <div className="checkout">
-      <div className="checout__left">
+      <div className="checkout__left">
         <img
           className="checkout__ad"
           src="https://blog.hubspot.com/hubfs/How%20to%20Explain%20Banner%20Ads%20to%20Anyone-3.png"
@@ -19,7 +19,7 @@ function Checkout() {
 
         <div className="checkout__title">
           <h3>Hey, {user?.email}</h3>
-          <h2>Your Shopping Basket</h2>
+          <h2>Your Shopping Basket {basket.length === 0 ? "is Empty" : ""}</h2>
           {basket.map((item) => (
             <CheckoutProduct
               id={item.id}
