@@ -2,6 +2,7 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import Button from "@material-ui/core/Button";
 
 function Product({ id, title, price, rating, image }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -36,7 +37,13 @@ function Product({ id, title, price, rating, image }) {
         </div>
       </div>
       <img src={image} alt="" />
-      <button onClick={addToBasket}>Add to Cart</button>
+      <Button
+        variant="contained"
+        style={{ backgroundColor: "#FCB941" }}
+        onClick={addToBasket}
+      >
+        Add to Cart
+      </Button>
     </div>
   );
 }

@@ -1,14 +1,13 @@
-import { useElements, useStripe } from "@stripe/react-stripe-js";
 import React from "react";
 import { Link } from "react-router-dom";
 import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
 import { useStateValue } from "./StateProvider";
-import { CardElements, useStripe, useElements } from "@stripe/react-stripe-js";
+//import { CardElements, useStripe, useElements } from "@stripe/react-stripe-js";
 
 function Payment() {
-  const stripe = useStripe();
-  const elements = useElements();
+  //const stripe = useStripe();
+  //const elements = useElements();
 
   const [{ basket, user }] = useStateValue();
   return (
