@@ -37,11 +37,7 @@ function Product({ id, title, price, rating, image }) {
         </div>
       </div>
       <img src={image} alt="" />
-      <Button
-        variant="contained"
-        style={{ backgroundColor: "#FCB941" }}
-        onClick={addToBasket}
-      >
+      <Button variant="contained" onClick={addToBasket}>
         Add to Cart
       </Button>
     </div>

@@ -10,6 +10,7 @@
   min-width: 100px;
   background-color: white;
   z-index: 1;
+  border-radius: 5px;
 }
 
 .product > img {
@@ -20,11 +21,15 @@
 }
 
 .product > button {
-  /* background: #f0c14b;
-  border: 1px solid;
-  margin-top: 10px;
-  border-color: #a88734, #9c7e31, #846a29;
-  color: #111; */
+  background-color: #fec606;
+  font-weight: 600;
+  color: white;
+}
+
+.product > button:hover {
+  border: 1px solid #fec606;
+  color: #fec606;
+  background-color: white;
 }
 
 .product__price {
