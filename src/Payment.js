@@ -11,6 +11,7 @@ import {
 } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
+import Axios from "axios";
 
 function Payment() {
   const stripe = useStripe();
@@ -24,7 +25,7 @@ function Payment() {
 
   useEffect(() => {
     const getClientSecret = async () => {
-      const response = await axios({
+      const response = await Axios({
         method: "post",
         url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
       });
